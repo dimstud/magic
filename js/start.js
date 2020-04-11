@@ -1,12 +1,16 @@
 'use strict';
-var renderCloud = function() {
 
-};
 
-window.renderStatistics = function(ctx, names, times) {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
-  ctx.fillRect(110, 20, 420, 270);
+window.renderStatistics = function (ctx, names, times) {
+  var dataCloud = {
+    startX: 100,
+    startY: 10,
+    widthRect: 420,
+    heightRect: 270,
+    lenghtShadow: 10,
+    margin: 40,
 
-  ctx.fillStyle = '#fff';
-  ctx.fillRect(100, 10, 420, 270);
+    colorRect: ['rgba(0, 0, 0, 0.7)', 'rgb(256, 256, 256)'],
+    text: ['Ура вы победили!', 'Список результатов: ']
+  };
 };
