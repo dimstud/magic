@@ -18,4 +18,5 @@ window.renderStatistics = function (ctx, names, times) {
   drawRect(dataCloud.startX, dataCloud.startY, dataCloud.widthRect, dataCloud.heightRect, dataCloud.colorRect[1]);
   writeText(dataCloud.text);
   drawHistogram(times, names);
+
 };
