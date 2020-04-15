@@ -13,4 +13,9 @@ window.renderStatistics = function (ctx, names, times) {
     colorRect: ['rgba(0, 0, 0, 0.7)', 'rgb(256, 256, 256)'],
     text: ['Ура вы победили!', 'Список результатов: ']
   };
+
+  drawRect(dataCloud.startX + dataCloud.lenghtShadow, dataCloud.startY + dataCloud.lenghtShadow, dataCloud.widthRect, dataCloud.heightRect, dataCloud.colorRect[0]);
+  drawRect(dataCloud.startX, dataCloud.startY, dataCloud.widthRect, dataCloud.heightRect, dataCloud.colorRect[1]);
+  writeText(dataCloud.text);
+  drawHistogram(times, names);
 };
