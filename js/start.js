@@ -62,5 +62,27 @@ window.renderStatistics = function (ctx, names, times) {
       ctx.fillText(arrayTimes[i].toFixed(0), getX, getY - dataHistogram.indentTime);
     }
   }
+  // Вспомогательные функции
+  // Ищем наихудший результат
+  function getMaxValue(array) {
+    var max = -1;
+    for (var i = 0; i < array.length; i++) {
+      var value = array[i];
+      if (value > max) {
+        max = value;
+      }
+    }
+    return max;
+  }
 
+  // Вычисляем цвет бара в зависимости от имени игрока
+  function fillBarColor(namePlayer) {
+    var randomOpacity = Math.random().toFixed(2);
+    if (namePlayer === 'Вы') {
+      ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+    } else {
+      ctx.fillStyle = 'rgba(0, 0, 255, ' + randomOpacity + ')';
+    }
+  }
 };
+
